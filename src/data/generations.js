@@ -1,5 +1,7 @@
+import gen5Member1 from '../assets/members/gen5-member-1.webp'
 import gen5Member2 from '../assets/members/gen5-member-2.webp'
 import gen5Member3 from '../assets/members/gen5-member-3.webp'
+import gen5Member4 from '../assets/members/gen5-member-4.webp'
 import gen4Leader1 from '../assets/members/gen4-leader-1.webp'
 import gen4Leader2 from '../assets/members/gen4-leader-2.webp'
 import gen4Member1 from '../assets/members/gen4-member-1.webp'
@@ -33,10 +35,10 @@ export const GENERATIONS = [
   {
     generation: 5,
     members: [
-      { department: '소프트웨어과', name: '고희경' },
+      { department: '소프트웨어과', name: '고희경', photo: gen5Member1 },
       { department: '소프트웨어과', name: '김서은', photo: gen5Member2 },
       { department: '소프트웨어과', name: '박소연', photo: gen5Member3 },
-      { department: '소프트웨어과', name: '여서정' },
+      { department: '소프트웨어과', name: '여서정', photo: gen5Member4 },
     ],
   },
   {
