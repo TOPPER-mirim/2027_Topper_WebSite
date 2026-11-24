@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+import { getFitScale } from '../../utils/fitScale'
 import './NavigationBar.css'
 
 // Figma: Hero(1080px) 바로 아래 107px 지점(Y 1187)에서 나타나 이후 화면에 고정된다.
@@ -34,15 +35,18 @@ export default function NavigationBar({ items = DEFAULT_ITEMS, className = '' })
         return
       }
       nav.classList.add('nav--follow')
-      const heroBottom = hero.getBoundingClientRect().bottom
+      // 화면 폭에 맞춰 축소(zoom) 중이면 getBoundingClientRect 값은 화면 px 이므로 CSS px 로 환산한다.
+      const heroBottom = hero.getBoundingClientRect().bottom / getFitScale()
       nav.style.top = `${Math.max(FOLLOW_OFFSET, heroBottom + FOLLOW_OFFSET)}px`
     }
     update()
     window.addEventListener('scroll', update, { passive: true })
     window.addEventListener('resize', update)
+    window.addEventListener('topper:fit', update)
     return () => {
       window.removeEventListener('scroll', update)
       window.removeEventListener('resize', update)
+      window.removeEventListener('topper:fit', update)
     }
   }, [pathname])
 

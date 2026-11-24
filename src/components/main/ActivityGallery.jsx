@@ -8,7 +8,18 @@ import g5 from '../../assets/gallery/gallery-5.jpg'
 import g6 from '../../assets/gallery/gallery-6.jpg'
 import './MainSections.css'
 
-const PHOTOS = [g1, g2, g3, g4, g5, g6]
+// 사진 목록 — 문자열(경로) 또는 { src, crop }. crop은 Figma에서 사진을 확대·이동해 쓴 경우의 위치(카드 대비 %).
+const PHOTOS = [
+  {
+    src: g1,
+    crop: { left: '-11.44%', top: '-11.23%', width: '122.89%', height: '151.14%' },
+  },
+  g2,
+  g3,
+  g4,
+  g5,
+  g6,
+]
 const VISIBLE = 6 // 1440 영역에 걸치는 카드 수: 온전한 4장 + 좌우 60px씩 잘린 2장 (Figma 기준)
 const INTERVAL = 3000 // 한 칸 이동 간격(ms)
 
@@ -61,11 +72,20 @@ export default function ActivityGallery({ photos = PHOTOS }) {
           }}
           onTransitionEnd={handleTransitionEnd}
         >
-          {items.map((src, i) => (
-            <li className="gallery__card" key={i} aria-hidden={i >= count}>
-              <img src={src} alt="" draggable="false" />
-            </li>
-          ))}
+          {items.map((photo, i) => {
+            const { src, crop } = typeof photo === 'string' ? { src: photo } : photo
+            return (
+              <li className="gallery__card" key={i} aria-hidden={i >= count}>
+                <img
+                  src={src}
+                  alt=""
+                  draggable="false"
+                  className={crop ? 'is-cropped' : undefined}
+                  style={crop}
+                />
+              </li>
+            )
+          })}
         </ul>
         <div className="gallery__fade gallery__fade--left" />
         <div className="gallery__fade gallery__fade--right" />
