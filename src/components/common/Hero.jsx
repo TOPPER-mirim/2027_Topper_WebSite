@@ -53,10 +53,10 @@ export default function Hero({
         <HeroLogo className="hero__logo" />
         <p className="hero__desc">{description}</p>
         <div className="hero__buttons">
-          <Button variant="arrow" href={askHref}>
+          <Button variant="reveal" href={askHref}>
             ask
           </Button>
-          <Button variant="text" href={instagramHref}>
+          <Button variant="reveal" href={instagramHref}>
             Instargram
           </Button>
         </div>
