@@ -9,6 +9,8 @@
 
 .about__banner {
   margin-top: 250px; /* 최신 기수 ↔ Banner */
+  scroll-snap-align: start;
+  scroll-margin-top: var(--snap-offset, 60px);
 }
 
 .about__previous {
