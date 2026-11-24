@@ -10,6 +10,12 @@
   transform: translateY(-50%);
 }
 
+/* Hero가 있는 페이지: top은 JS가 스크롤에 맞춰 지정 (Figma X 1745 → 오른쪽 50px) */
+.nav--follow {
+  right: 50px;
+  transform: none;
+}
+
 .nav__item {
   display: flex;
   align-items: center;
