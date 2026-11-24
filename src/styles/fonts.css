@@ -27,3 +27,26 @@
   font-display: swap;
   src: url('../assets/fonts/Pretendard-Bold.woff2') format('woff2');
 }
+
+/* SB 어그로 OTF — 제목/배너용 디스플레이 폰트 (family 이름은 Figma 기준 'SB AggroOTF') */
+@font-face {
+  font-family: 'SB AggroOTF';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/SBAggro-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'SB AggroOTF';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/SBAggro-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'SB AggroOTF';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/SBAggro-Bold.otf') format('opentype');
+}

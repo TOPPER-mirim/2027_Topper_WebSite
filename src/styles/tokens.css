@@ -19,7 +19,7 @@
     'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR',
     sans-serif;
 
-  /* Display font (Banner 제목 등) — SB AggroOTF 파일이 아직 없어 Pretendard로 대체 중 */
+  /* Display font (Banner 제목 등) */
   --font-display: 'SB AggroOTF', var(--font-family);
 
   /* Font weight (Figma: Regular / Medium) */
