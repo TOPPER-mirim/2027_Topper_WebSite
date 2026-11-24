@@ -29,7 +29,7 @@ export default function Button({
   const content = (
     <>
       <span className="btn__label">{children}</span>
-      {variant === 'arrow' && <span className="btn__icon" aria-hidden="true" />}
+      {(variant === 'arrow' || variant === 'reveal') && <span className="btn__icon" aria-hidden="true" />}
     </>
   )
 

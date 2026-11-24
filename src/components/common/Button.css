@@ -39,6 +39,29 @@
   border-bottom: 1px solid currentColor;
 }
 
+/* variant: reveal — 기본은 텍스트만, hover 시 밑줄 + 화살표(arrow 모양) */
+.btn--reveal {
+  border-bottom: 1px solid transparent;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+/* 화살표 자리는 항상 확보해 두고 투명도만 바꿔서, hover해도 버튼 크기·글자 위치가 변하지 않게 한다 */
+.btn--reveal .btn__icon {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.btn--reveal:hover,
+.btn--reveal:focus-visible {
+  opacity: 1;
+  border-bottom-color: currentColor;
+}
+
+.btn--reveal:hover .btn__icon,
+.btn--reveal:focus-visible .btn__icon {
+  opacity: 1;
+}
+
 .btn__icon {
   flex-shrink: 0;
   width: 20px;
