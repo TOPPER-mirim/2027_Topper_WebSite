@@ -18,6 +18,9 @@ body {
 }
 
 html {
+  /* iOS/인앱 브라우저의 글자 자동 확대 방지 */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   overflow-x: clip;
   /* 스크롤이 멈추면 항상 가장 가까운 섹션 맨 위로 붙는다.
      화면보다 큰 섹션은 그 안에서 자유롭게 스크롤할 수 있다. */
