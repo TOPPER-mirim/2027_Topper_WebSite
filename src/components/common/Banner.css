@@ -1,0 +1,47 @@
+.banner {
+  position: relative;
+  width: var(--container-width);
+  height: 359px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #000 0%, #1f4369 100%);
+}
+
+.banner__shape {
+  position: absolute;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.banner__shape--2 {
+  left: -255px;
+  top: -627px;
+  width: 1192px;
+  height: 1192px;
+}
+
+.banner__shape--1 {
+  left: 402px;
+  top: -151px;
+  width: 1073px;
+  height: 1073px;
+}
+
+.banner__title {
+  position: absolute;
+  left: 72px;
+  top: 211px;
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 300;
+  letter-spacing: -1.44px;
+  white-space: nowrap;
+  color: #fefefe;
+}
+
+.banner__button {
+  position: absolute;
+  left: 1196px;
+  top: 241px;
+}

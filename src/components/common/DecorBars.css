@@ -1,0 +1,27 @@
+.decor-bar {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* 개별 transform 속성(translate)을 써서 위치/회전용 transform과 겹치지 않는다. */
+.decor-bar--float {
+  animation: decor-float var(--float-dur, 6s) ease-in-out var(--float-delay, 0s)
+    infinite;
+  will-change: translate;
+}
+
+@keyframes decor-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: var(--float-x, 0) var(--float-y, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .decor-bar--float {
+    animation: none;
+  }
+}

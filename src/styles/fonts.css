@@ -1,0 +1,61 @@
+/* Pretendard 1.3.9 (SIL OFL 1.1) — 라이선스: src/assets/fonts/LICENSE.txt */
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/Pretendard-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/Pretendard-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/Pretendard-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/Pretendard-Bold.woff2') format('woff2');
+}
+
+/* SB 어그로 OTF — 제목/배너용 디스플레이 폰트 (family 이름은 Figma 기준 'SB AggroOTF') */
+@font-face {
+  font-family: 'SB AggroOTF';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/SBAggro-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'SB AggroOTF';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/SBAggro-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'SB AggroOTF';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/SBAggro-Bold.otf') format('opentype');
+}
+
+/* 창원단감아삭체 Bold — Hero의 TOPPER 로고 타이포 */
+@font-face {
+  font-family: 'ChangwonDangamAsac';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/ChangwonDangamAsac-Bold.otf') format('opentype');
+}
