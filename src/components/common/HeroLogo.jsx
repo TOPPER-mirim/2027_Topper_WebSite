@@ -8,9 +8,9 @@ const SCALE = LOGO_FONT_SIZE / 1000 // 폰트 단위(1000 upm) → px
 const WIDTH = 1379.17
 const HEIGHT = 366
 
-// 글씨가 올라오는 동안(1.2s) 시작해서, 틈이 가운데에서 좌우로 길어진다.
-const GROW_BEGIN = '0.9s'
-const GROW_DUR = '1s'
+// 화면이 뜨자마자 글씨가 올라오는 것(1.2s)과 함께, 틈이 가운데에서 좌우로 길어진다.
+const GROW_BEGIN = '0s'
+const GROW_DUR = '1.2s'
 
 function prefersReducedMotion() {
   return (
