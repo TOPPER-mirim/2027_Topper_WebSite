@@ -29,7 +29,7 @@ const BARS_TOP = [
 /**
  * 메인 Hero (높이 1080px, 가로는 화면 전체).
  * 3D 배경 + TOPPER 로고 타이포 + 소개 문구 + 버튼 2개 + 장식 막대.
- * 장식은 1920px 기준 좌표로 배치되며 화면 가운데에 정렬된다.
+ * 장식 막대는 천천히 떠다니며(동작 줄이기 설정 시 정지), 1920px 기준 좌표로 배치되어 화면 가운데에 정렬된다.
  *
  * @param {string} [description] - 소개 문구 (\n으로 줄바꿈)
  * @param {string} [askHref] - "ask" 버튼 링크
@@ -45,11 +45,11 @@ export default function Hero({
   return (
     <section className={`hero ${className}`.trim()}>
       <div className="hero__stage">
-        <DecorBars items={BARS_BACK} />
+        <DecorBars items={BARS_BACK} animate />
         <img className="hero__shape hero__shape--2" src={shape2} alt="" />
-        <DecorBars items={BARS_MID} />
+        <DecorBars items={BARS_MID} animate />
         <img className="hero__shape hero__shape--1" src={shape1} alt="" />
-        <DecorBars items={BARS_FRONT} />
+        <DecorBars items={BARS_FRONT} animate />
 
         <h1 className="hero__logo">TOPPER</h1>
         <p className="hero__desc">{description}</p>
@@ -62,7 +62,7 @@ export default function Hero({
           </Button>
         </div>
 
-        <DecorBars items={BARS_TOP} />
+        <DecorBars items={BARS_TOP} animate />
       </div>
     </section>
   )
