@@ -1,0 +1,19 @@
+/* About us 섹션 간격 — Figma(About us 1920 프레임) 기준 */
+.about {
+  padding-bottom: 820px; /* 마지막 기수 ↔ Footer */
+}
+
+.about__latest {
+  margin-top: 250px; /* Hero ↔ 최신 기수 */
+}
+
+.about__banner {
+  margin-top: 250px; /* 최신 기수 ↔ Banner */
+}
+
+.about__previous {
+  display: flex;
+  flex-direction: column;
+  gap: 650px; /* 기수 ↔ 기수 */
+  margin-top: 500px; /* Banner ↔ 이전 기수 */
+}

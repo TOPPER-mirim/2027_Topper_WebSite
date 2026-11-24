@@ -1,0 +1,18 @@
+.generation-section {
+  display: flex;
+  flex-direction: column;
+  gap: 150px; /* 리더 영역 ↔ 멤버 영역 */
+}
+
+.generation-section__members {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.generation-section__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 345px);
+  column-gap: 20px;
+  row-gap: 40px; /* 멤버가 4명을 넘어 줄이 바뀔 때의 간격 (Figma에는 없음) */
+}
