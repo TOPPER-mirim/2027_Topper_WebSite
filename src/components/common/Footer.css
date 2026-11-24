@@ -25,20 +25,31 @@
   gap: 20px;
 }
 
-.footer__big {
+/* 큰 타이포 흐름: 화면 전체 폭 */
+.footer__marquee {
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 238px;
+  overflow: hidden;
+}
+
+.footer__track {
+  display: flex;
+  align-items: flex-start;
+  width: max-content;
+  animation: footer-flow 24s linear infinite;
+}
+
+/* Figma: 두 번째 묶음은 18px 위에서 시작 (top 256.05 → 238) */
+.footer__unit {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  margin-top: 18.05px;
 }
-
-.footer__big--1 {
-  left: 0;
-  top: 256.05px;
-}
-
-.footer__big--2 {
-  left: 1252px;
-  top: 238px;
+.footer__unit:nth-child(even) {
+  margin-top: 0;
 }
 
 .footer__big-text {
@@ -50,9 +61,35 @@
   color: var(--color-white);
 }
 
-.footer__big-shape {
+/* 삼각형 2개 (324×221): 파랑이 뒤, 보라-분홍이 앞 */
+.footer__shape {
+  position: relative;
+  display: block;
   width: 324px;
-  height: 220px;
+  height: 221px;
   flex-shrink: 0;
+}
+.footer__shape img {
+  position: absolute;
+  top: 9.99px; /* 221 × 4.52% */
+  width: 176.78px;
+  height: 155.75px;
   max-width: none;
+}
+.footer__shape-back {
+  left: 125.1px; /* ml 103 + 221 × 10% */
+}
+.footer__shape-front {
+  left: 22.1px;
+}
+
+@keyframes footer-flow {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer__track {
+    animation: none;
+  }
 }
