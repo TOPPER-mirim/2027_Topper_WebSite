@@ -2,15 +2,13 @@ import { useState } from 'react'
 import SectionTitle from '../common/SectionTitle'
 import arrowRight from '../../assets/icons/arrow-right.svg'
 import preview1 from '../../assets/preview/preview-1.jpg'
-import gallery5 from '../../assets/gallery/gallery-5.jpg'
-import gallery3 from '../../assets/gallery/gallery-3.jpg'
+import preview2 from '../../assets/preview/preview-2.png'
 import './MainSections.css'
 
-// Figma에는 첫 슬라이드 이미지만 있음 — 나머지는 임시 사진, 실제 사진으로 교체 필요.
+// 슬라이드 2장 — 추가/삭제는 이 배열만 수정한다. (이미지는 1440×603)
 const DEFAULT_SLIDES = [
   { src: preview1, alt: 'TOPPER 부원 단체 사진' },
-  { src: gallery5, alt: 'TOPPER 활동 사진' },
-  { src: gallery3, alt: 'TOPPER 활동 사진' },
+  { src: preview2, alt: 'TOPPER 부원 단체 사진 (야외)' },
 ]
 
 /**
