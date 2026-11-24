@@ -112,28 +112,36 @@
   transform: rotate(180deg);
 }
 
-/* ===== TOPPER 에서는 (marquee) ===== */
+/* ===== TOPPER 에서는 (한 화면 4장, 한 칸씩 이동) ===== */
 .gallery {
   position: relative;
-  /* 화면 전체 폭으로 확장 */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: var(--container-width);
+  margin: 0 auto;
   overflow: hidden;
+}
+/* 좌우 끝 페이드 (Figma Rectangle 72/73) */
+.gallery__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+}
+.gallery__fade--left {
+  left: 0;
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+}
+.gallery__fade--right {
+  right: 0;
+  background: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
 }
 .gallery__track {
   display: flex;
-  width: max-content;
-  animation: gallery-flow 40s linear infinite;
-}
-.gallery:hover .gallery__track {
-  animation-play-state: paused;
-}
-.gallery__list {
-  display: flex;
   gap: 24px;
-  padding: 0 24px 0 0;
   margin: 0;
+  padding: 0;
   list-style: none;
+  transition: transform 0.6s ease;
 }
 .gallery__card {
   flex: 0 0 300px;
@@ -147,29 +155,9 @@
   height: 100%;
   object-fit: cover;
 }
-.gallery__fade {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 240px;
-  pointer-events: none;
-}
-.gallery__fade--left {
-  left: 0;
-  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
-}
-.gallery__fade--right {
-  right: 0;
-  background: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
-}
-@keyframes gallery-flow {
-  to {
-    transform: translateX(-50%);
-  }
-}
 @media (prefers-reduced-motion: reduce) {
   .gallery__track {
-    animation: none;
+    transition: none;
   }
 }
 
