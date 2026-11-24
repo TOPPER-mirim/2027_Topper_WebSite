@@ -8,7 +8,7 @@ import "./MainSections.css";
  */
 export default function ActivityCards({ cards = ACTIVITY_CARDS }) {
   return (
-    <section className="main-section">
+    <section className="main-section activity-section">
       <SectionTitle
         className="main-title"
         title="TOPPER의 주요 활동"

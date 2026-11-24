@@ -25,7 +25,7 @@ export default function PreviewSlider({ slides = DEFAULT_SLIDES }) {
   const go = (delta) => setIndex((i) => (i + delta + count) % count)
 
   return (
-    <section className="main-section">
+    <section className="main-section preview-section">
       <SectionTitle
         className="main-title"
         title="TOPPER 미리보기"

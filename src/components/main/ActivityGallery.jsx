@@ -45,7 +45,7 @@ export default function ActivityGallery({ photos = PHOTOS }) {
   }
 
   return (
-    <section className="main-section">
+    <section className="main-section gallery-section">
       <SectionTitle
         className="main-title"
         title="TOPPER 에서는"
