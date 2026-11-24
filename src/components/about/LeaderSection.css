@@ -1,0 +1,30 @@
+.leader-section {
+  display: flex;
+  gap: 113px;
+  align-items: flex-start;
+}
+
+.leader-section__info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 617px;
+  padding: 42px 0;
+  align-self: stretch;
+}
+
+.leader-section__names {
+  display: flex;
+  gap: 20px;
+  width: 361px;
+}
+
+.leader-section__names > * {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.leader-section__photos {
+  display: flex;
+  gap: 20px;
+}
