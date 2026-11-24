@@ -5,6 +5,7 @@
   --color-blue-100: #b6d9ff;
   --color-blue-300: #61adff;
   --color-blue-500: #1385ff;
+  --color-blue-600: #1179e8;
 
   /* Color: semantic */
   --color-primary: var(--color-blue-500); /* 메인 블루 */
