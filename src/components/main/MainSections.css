@@ -9,6 +9,16 @@
   gap: 64px;
 }
 
+/* 스냅 위치는 위쪽 간격이 아니라 섹션 제목 줄에 맞춘다 */
+.main-section {
+  scroll-snap-align: start;
+  /* 제목 위에 남길 여백(--snap-offset)만큼 위에서 멈춘다 */
+  scroll-margin-top: calc(-1 * var(--section-gap, 120px) + var(--snap-offset, 60px));
+}
+.skills {
+  scroll-snap-align: start;
+}
+
 /* 섹션 사이 간격 (Figma 1920 시안 좌표 기준) */
 .preview-section { --section-gap: 250px; } /* Hero → TOPPER 미리보기 */
 .gallery-section { --section-gap: 230px; } /* 미리보기 → TOPPER 에서는 */

@@ -19,6 +19,9 @@ body {
 
 html {
   overflow-x: clip;
+  /* 스크롤이 멈추면 항상 가장 가까운 섹션 맨 위로 붙는다.
+     화면보다 큰 섹션은 그 안에서 자유롭게 스크롤할 수 있다. */
+  scroll-snap-type: y mandatory;
 }
 
 h1,
