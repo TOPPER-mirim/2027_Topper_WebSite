@@ -47,6 +47,25 @@
   line-height: normal;
   white-space: nowrap;
   color: var(--color-white);
+  /* 새로고침(처음 렌더링) 시 아래에서 연하게 올라오며 진해진다. */
+  animation: hero-logo-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes hero-logo-in {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__logo {
+    animation: none;
+  }
 }
 
 .hero__desc {
