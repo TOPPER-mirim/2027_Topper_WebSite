@@ -1,0 +1,25 @@
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-title--center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-title__title {
+  font-size: var(--fs-section-title);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.section-title__desc {
+  font-size: var(--fs-section-desc);
+  font-weight: var(--fw-regular);
+  line-height: 1.4;
+  color: var(--color-text-sub);
+  white-space: pre-line;
+}
