@@ -262,8 +262,8 @@
 .projects {
   position: relative;
   /* 화면 전체 폭으로 확장 */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: var(--page-w, 100vw);
+  margin-left: calc(50% - var(--page-w, 100vw) / 2);
   overflow: hidden;
 }
 .projects__track {
@@ -477,8 +477,8 @@ a.projects__card:hover {
 /* ===== TOPPER의 기술들 ===== */
 .skills {
   /* 배경은 화면 전체 폭 */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: var(--page-w, 100vw);
+  margin-left: calc(50% - var(--page-w, 100vw) / 2);
   /* FAQ → 기술들 722px (Banner 자리 제외), 기술들 → Footer 420px */
   margin-top: 722px;
   margin-bottom: 420px;
