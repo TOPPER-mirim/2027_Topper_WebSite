@@ -1,0 +1,46 @@
+.member-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 345px;
+  margin: 0;
+}
+
+.member-card__photo {
+  width: 345px;
+  height: 365px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(101, 101, 101, 0.2); /* 사진이 없을 때 placeholder */
+}
+
+.member-card__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-label {
+  display: flex;
+  flex-direction: column;
+  padding: 0 6px;
+  color: var(--color-blue-title);
+  word-break: keep-all;
+}
+
+.member-label__caption {
+  margin-bottom: -3px;
+  font-size: 16px;
+  font-weight: var(--fw-regular);
+  line-height: 26px;
+  letter-spacing: -0.24px;
+}
+
+.member-label__name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: -0.48px;
+}

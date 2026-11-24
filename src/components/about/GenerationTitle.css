@@ -1,0 +1,9 @@
+.generation-title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 52px;
+  letter-spacing: -0.96px;
+  white-space: nowrap;
+  color: var(--color-blue-title);
+}

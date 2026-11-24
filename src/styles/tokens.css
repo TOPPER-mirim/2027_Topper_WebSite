@@ -6,6 +6,7 @@
   --color-blue-300: #61adff;
   --color-blue-500: #1385ff;
   --color-blue-600: #1179e8;
+  --color-blue-title: #365ed7; /* About us 기수 타이틀/멤버 텍스트 */
 
   /* Color: semantic */
   --color-primary: var(--color-blue-500); /* 메인 블루 */
