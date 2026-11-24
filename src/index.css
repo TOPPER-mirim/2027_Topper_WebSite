@@ -13,6 +13,15 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
+  /* 좌우 스크롤 방지 (100vw 요소·고정폭 섹션이 만드는 가로 넘침 차단) */
+  overflow-x: clip;
+}
+
+html {
+  overflow-x: clip;
+  /* 스크롤이 멈추면 항상 가장 가까운 섹션 맨 위로 붙는다.
+     화면보다 큰 섹션은 그 안에서 자유롭게 스크롤할 수 있다. */
+  scroll-snap-type: y mandatory;
 }
 
 h1,

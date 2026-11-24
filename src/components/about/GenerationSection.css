@@ -1,4 +1,7 @@
 .generation-section {
+  /* 스크롤 스냅: 기수 섹션 위에 살짝 여백을 두고 멈춘다 (Main과 동일) */
+  scroll-snap-align: start;
+  scroll-margin-top: var(--snap-offset, 60px);
   display: flex;
   flex-direction: column;
   gap: 150px; /* 리더 영역 ↔ 멤버 영역 */

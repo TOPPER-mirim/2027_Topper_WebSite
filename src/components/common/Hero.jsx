@@ -1,31 +1,29 @@
-import Button from './Button'
-import DecorBars from './DecorBars'
-import HeroLogo from './HeroLogo'
-import { BAR_COLORS as C } from './barColors'
-import shape1 from '../../assets/shapes/shape-1.png'
-import shape2 from '../../assets/shapes/shape-2.png'
-import './Hero.css'
+import Button from "./Button";
+import DecorBars from "./DecorBars";
+import HeroLogo from "./HeroLogo";
+import { BAR_COLORS as C } from "./barColors";
+import shape1 from "../../assets/shapes/shape-1.png";
+import shape2 from "../../assets/shapes/shape-2.png";
+import "./Hero.css";
 
 // [left, top, 박스너비, 박스높이, 회전, 길이, 두께, 색] — Figma 좌표(1920×1080) 기준
 const BARS_BACK = [
   [79.11, 856.94, 161.022, 146.671, -138.59, 190, 28, C.blue500],
   [1508.91, 840.9, 190.212, 80.267, -163.68, 190, 28, C.blue500],
-]
+];
 const BARS_MID = [
   [590.12, 197.51, 187.433, 91.791, -159.51, 190, 27, C.blue500],
   [1724, 89, 164.512, 140.735, -140.92, 190, 27, C.blue100],
   [1065, 943, 187.67, 90.807, 159.85, 190, 27, C.blue300],
-]
-const BARS_FRONT = [
-  [1581, 478.3, 95.834, 186.383, -68.13, 190, 27, C.blue50],
-]
+];
+const BARS_FRONT = [[1581, 478.3, 95.834, 186.383, -68.13, 190, 27, C.blue50]];
 const BARS_TOP = [
   [1442, 69.48, 119.249, 178.545, -60, 190, 28, C.blue500],
   [188.89, 730.66, 187.67, 90.807, 159.85, 190, 27, C.blue300],
   [1104.48, -19.03, 141.837, 163.668, -129.57, 190, 27, C.blue300],
   [136.86, 147.82, 164.512, 140.735, -140.92, 190, 27, C.blue100],
   [544, 836, 164.512, 140.735, -140.92, 190, 27, C.blue100],
-]
+];
 
 /**
  * 메인 Hero (높이 1080px, 가로는 화면 전체).
@@ -38,10 +36,10 @@ const BARS_TOP = [
  * @param {string} [className] - 추가 클래스
  */
 export default function Hero({
-  description = '토퍼는 전공 분야의 기술을 깊이 있게 탐구하고\n아이디어를 실제 서비스로 구현하며 실무 역량을 키워가는 전공 동아리입니다.',
-  askHref,
-  instagramHref,
-  className = '',
+  description = "토퍼는 전공 분야의 기술을 깊이 있게 탐구하고\n아이디어를 실제 서비스로 구현하며 실무 역량을 키워가는 전공 동아리입니다.",
+  askHref = "https://asked.kr/profile/TOPPERed",
+  instagramHref = "https://www.instagram.com/topper_mirim/",
+  className = "",
 }) {
   return (
     <section className={`hero ${className}`.trim()}>
@@ -66,5 +64,5 @@ export default function Hero({
         <DecorBars items={BARS_TOP} animate />
       </div>
     </section>
-  )
+  );
 }
