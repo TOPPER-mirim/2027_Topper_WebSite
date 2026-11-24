@@ -13,6 +13,12 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
+  /* 좌우 스크롤 방지 (100vw 요소·고정폭 섹션이 만드는 가로 넘침 차단) */
+  overflow-x: clip;
+}
+
+html {
+  overflow-x: clip;
 }
 
 h1,

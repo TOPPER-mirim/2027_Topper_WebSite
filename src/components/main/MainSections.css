@@ -1,0 +1,254 @@
+/* ===== 공통 ===== */
+.main-section {
+  width: var(--container-width);
+  margin: 0 auto;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* 마지막 섹션 아래 Footer와의 간격 */
+.main-section:last-child {
+  padding-bottom: 120px;
+}
+
+/* Figma: 제목 40px / 설명 20px, #365ed7 (SectionTitle 기본값 덮어쓰기) */
+.main-title {
+  gap: 0;
+}
+.main-title .section-title__title {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 62px;
+  letter-spacing: -0.8px;
+  color: #365ed7;
+  margin-bottom: -4px;
+}
+.main-title .section-title__desc {
+  font-size: 20px;
+  font-weight: var(--fw-regular);
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  color: #365ed7;
+}
+
+/* ===== TOPPER 미리보기 ===== */
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.preview__frame {
+  position: relative;
+  width: 100%;
+  height: 603px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.preview__track {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: transform 0.5s ease;
+}
+.preview__slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+.preview__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+.preview__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.preview__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.preview__dot.is-active {
+  background: #fff;
+}
+.preview__buttons {
+  display: flex;
+  gap: 16px;
+}
+.preview__btn {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-blue-50);
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+}
+.preview__btn:hover {
+  background: var(--color-blue-100);
+}
+.preview__btn img {
+  width: 24px;
+  height: 24px;
+}
+.preview__btn--prev img {
+  transform: rotate(180deg);
+}
+
+/* ===== TOPPER 에서는 (marquee) ===== */
+.gallery {
+  position: relative;
+  /* 화면 전체 폭으로 확장 */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+}
+.gallery__track {
+  display: flex;
+  width: max-content;
+  animation: gallery-flow 40s linear infinite;
+}
+.gallery:hover .gallery__track {
+  animation-play-state: paused;
+}
+.gallery__list {
+  display: flex;
+  gap: 24px;
+  padding: 0 24px 0 0;
+  margin: 0;
+  list-style: none;
+}
+.gallery__card {
+  flex: 0 0 300px;
+  height: 431px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.gallery__card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 240px;
+  pointer-events: none;
+}
+.gallery__fade--left {
+  left: 0;
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+}
+.gallery__fade--right {
+  right: 0;
+  background: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
+}
+@keyframes gallery-flow {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery__track {
+    animation: none;
+  }
+}
+
+/* ===== 주요 활동 ===== */
+.activity {
+  display: flex;
+  gap: 20px;
+}
+.activity__card {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.activity__visual {
+  position: relative;
+  height: 470px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.activity__layers,
+.activity__bars {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.5s ease;
+}
+.activity__box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity__box img {
+  flex: none;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+.activity__box span {
+  flex: none;
+  display: block;
+}
+.activity__name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 206px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 62px;
+  letter-spacing: -0.8px;
+}
+.activity__desc {
+  padding: 0 2px;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  color: #365ed7;
+  word-break: keep-all;
+}
+/* 부모에 transform을 주면 stacking context가 생겨 hard-light 블렌딩(Project)이
+   카드 배경과 분리되어 색이 변하므로, 이미지 자체에 개별 scale/rotate를 준다. */
+.activity__box img {
+  transition: scale 0.5s ease, rotate 0.5s ease;
+}
+.activity__card:hover .activity__layers .activity__box img {
+  scale: 1.06;
+  rotate: 2deg;
+}
+.activity__card:hover .activity__bars {
+  transform: scale(1.1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .activity__layers,
+  .activity__bars,
+  .preview__track {
+    transition: none;
+  }
+}
