@@ -1,5 +1,6 @@
 import Button from './Button'
 import DecorBars from './DecorBars'
+import HeroLogo from './HeroLogo'
 import { BAR_COLORS as C } from './barColors'
 import shape1 from '../../assets/shapes/shape-1.png'
 import shape2 from '../../assets/shapes/shape-2.png'
@@ -51,7 +52,7 @@ export default function Hero({
         <img className="hero__shape hero__shape--1" src={shape1} alt="" />
         <DecorBars items={BARS_FRONT} animate />
 
-        <h1 className="hero__logo">TOPPER</h1>
+        <HeroLogo className="hero__logo" />
         <p className="hero__desc">{description}</p>
         <div className="hero__buttons">
           <Button variant="arrow" href={askHref}>
