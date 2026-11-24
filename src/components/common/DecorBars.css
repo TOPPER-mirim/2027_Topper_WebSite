@@ -1,0 +1,4 @@
+.decor-bar {
+  position: absolute;
+  pointer-events: none;
+}

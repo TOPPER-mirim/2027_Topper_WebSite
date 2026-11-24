@@ -50,3 +50,12 @@
   font-display: swap;
   src: url('../assets/fonts/SBAggro-Bold.otf') format('opentype');
 }
+
+/* 창원단감아삭체 Bold — Hero의 TOPPER 로고 타이포 */
+@font-face {
+  font-family: 'ChangwonDangamAsac';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/ChangwonDangamAsac-Bold.otf') format('opentype');
+}

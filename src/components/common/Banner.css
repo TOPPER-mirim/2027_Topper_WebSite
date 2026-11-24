@@ -7,11 +7,6 @@
   background: linear-gradient(180deg, #000 0%, #1f4369 100%);
 }
 
-.banner__bar {
-  position: absolute;
-  width: 99.996px;
-}
-
 .banner__shape {
   position: absolute;
   max-width: none;

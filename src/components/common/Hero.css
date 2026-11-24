@@ -1,0 +1,74 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 1080px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #000 0%, #1f4369 100%);
+}
+
+/* Figma 1920×1080 좌표계를 그대로 쓰는 무대. 화면 가운데에 정렬한다. */
+.hero__stage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1920px;
+  height: 1080px;
+  transform: translateX(-50%);
+}
+
+.hero__shape {
+  position: absolute;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.hero__shape--2 {
+  left: -442px;
+  top: -1185px;
+  width: 2265px;
+  height: 2265px;
+}
+
+.hero__shape--1 {
+  left: -253.68px;
+  top: -356.41px;
+  width: 3000px;
+  height: 3000px;
+}
+
+.hero__logo {
+  position: absolute;
+  left: 270px;
+  top: 339px;
+  font-family: var(--font-logo);
+  font-size: 304.856px;
+  font-weight: 700;
+  line-height: normal;
+  white-space: nowrap;
+  color: var(--color-white);
+}
+
+.hero__desc {
+  position: absolute;
+  top: 735px;
+  left: calc(50% + 0.5px);
+  width: 723px;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: var(--fw-medium);
+  line-height: 40px;
+  text-align: center;
+  white-space: pre-line;
+  color: var(--color-white);
+}
+
+.hero__buttons {
+  position: absolute;
+  top: 913px;
+  left: calc(50% + 0.5px);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  transform: translateX(-50%);
+}

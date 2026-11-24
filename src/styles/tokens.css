@@ -22,6 +22,9 @@
   /* Display font (Banner 제목 등) */
   --font-display: 'SB AggroOTF', var(--font-family);
 
+  /* Hero 로고 타이포 */
+  --font-logo: 'ChangwonDangamAsac', var(--font-family);
+
   /* Font weight (Figma: Regular / Medium) */
   --fw-regular: 400;
   --fw-medium: 500;
